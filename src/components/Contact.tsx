@@ -1,50 +1,37 @@
-import { SectionLabel } from "./CodeBlock";
-
 export function Contact() {
   return (
-    <section id="contact">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-        <SectionLabel id="05" title="contact" subtitle="Open to senior Unity / gameplay / backend roles." />
+    <section id="contact" className="relative">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="glow-card rounded-3xl p-10 md:p-14 text-center relative overflow-hidden">
+          <div className="absolute -top-20 -left-20 h-64 w-64 rounded-full bg-primary/30 blur-3xl" />
+          <div className="absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-accent/30 blur-3xl" />
 
-        <div className="mt-10 grid md:grid-cols-2 gap-px bg-border rounded-lg overflow-hidden border border-border">
-          <a
-            href="mailto:Shakshamshahu123@gmail.com"
-            className="bg-card p-8 hover:bg-secondary/40 transition-colors group"
-          >
-            <div className="font-mono text-xs text-primary mb-2">// email</div>
-            <div className="font-mono text-lg md:text-xl text-foreground group-hover:text-primary transition-colors break-all">
-              Shakshamshahu123@gmail.com
-            </div>
-            <div className="mt-4 font-mono text-xs text-muted-foreground">→ send_message()</div>
-          </a>
-          <a
-            href="tel:+917758957946"
-            className="bg-card p-8 hover:bg-secondary/40 transition-colors group"
-          >
-            <div className="font-mono text-xs text-primary mb-2">// phone</div>
-            <div className="font-mono text-lg md:text-xl text-foreground group-hover:text-primary transition-colors">
-              +91 7758 957 946
-            </div>
-            <div className="mt-4 font-mono text-xs text-muted-foreground">→ call()</div>
-          </a>
-        </div>
+          <div className="relative">
+            <div className="inline-block text-5xl mb-4 float">🚀</div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-gradient mb-4">
+              Let&apos;s build something epic
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto mb-8">
+              Open to senior Unity, gameplay, and backend engineering roles —
+              and freelance collaborations on ambitious mobile titles.
+            </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 rounded-lg border border-primary/40 bg-primary/5 px-6 py-5">
-          <div>
-            <div className="font-mono text-sm text-foreground">
-              Want the long-form version?
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+              <a href="mailto:Shakshamshahu123@gmail.com"
+                className="btn-primary rounded-full px-7 py-3.5 text-sm font-semibold inline-flex items-center gap-2">
+                ✉️ Shakshamshahu123@gmail.com
+              </a>
+              <a href="/Shaksham_Shahu_Resume.docx" download
+                className="rounded-full border border-border bg-white/5 px-7 py-3.5 text-sm font-semibold hover:bg-white/10 transition-colors inline-flex items-center gap-2">
+                ↓ Download Resume
+              </a>
             </div>
-            <div className="font-mono text-xs text-muted-foreground mt-1">
-              Full resume — experience, projects, certifications.
+
+            <div className="mt-8 flex justify-center gap-6 text-sm text-muted-foreground">
+              <span>📍 Nagpur, India</span>
+              <span>📞 +91 7758 957 946</span>
             </div>
           </div>
-          <a
-            href="/Shaksham_Shahu_Resume.docx"
-            download
-            className="inline-flex items-center gap-2 rounded border border-primary bg-primary px-5 py-2.5 font-mono text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-[0_0_24px_oklch(0.62_0.22_256/0.55)]"
-          >
-            ↓ download_resume.docx
-          </a>
         </div>
       </div>
     </section>
@@ -53,14 +40,10 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/60">
-      <div className="mx-auto max-w-6xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-3">
-        <div className="font-mono text-xs text-muted-foreground">
-          © 2026 Shaksham Shahu · built with C#-grade discipline.
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          <span className="text-primary">$</span> echo &quot;thanks for scrolling&quot;
-        </div>
+    <footer className="border-t border-border/40">
+      <div className="mx-auto max-w-6xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+        <div>© 2026 Shaksham Shahu · Crafted with ⚡ in Unity & React.</div>
+        <div>Press <kbd className="rounded border border-border bg-white/5 px-1.5 py-0.5 text-foreground">▲</kbd> to level up</div>
       </div>
     </footer>
   );
