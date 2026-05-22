@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Shaksham Portfolio" },
+      { name: "description", content: "Unity game developer specialising in pure C# coding, backend architecture, and mobile optimisation. 3+ years' experience, 24M+ downloads shipped." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Shaksham Portfolio" },
+      { property: "og:description", content: "Unity game developer specialising in pure C# coding, backend architecture, and mobile optimisation. 3+ years' experience, 24M+ downloads shipped." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Shaksham Portfolio" },
+      { name: "twitter:description", content: "Unity game developer specialising in pure C# coding, backend architecture, and mobile optimisation. 3+ years' experience, 24M+ downloads shipped." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fe8d630f-53ce-449a-9408-50b5e80c78c5" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/fe8d630f-53ce-449a-9408-50b5e80c78c5" },
     ],
     links: [
       {
