@@ -40,10 +40,40 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40">
-      <div className="mx-auto max-w-6xl px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-        <div>© 2026 Shaksham Shahu · Crafted with ⚡ in Unity & React.</div>
-        <div>Press <kbd className="rounded border border-border bg-white/5 px-1.5 py-0.5 text-foreground">▲</kbd> to level up</div>
+    <footer className="border-t border-border/40 mt-10">
+      <div className="mx-auto max-w-6xl px-6 py-10 grid gap-8 md:grid-cols-3 font-mono text-xs">
+        <div className="space-y-2">
+          <div className="text-foreground font-semibold tracking-wider uppercase">Shaksham Shahu</div>
+          <div className="text-muted-foreground">Unity Game Developer · Nagpur, India</div>
+          <div className="text-muted-foreground">© 2026 · Built with Unity & React.</div>
+        </div>
+
+        <div className="space-y-2">
+          <div className="text-accent uppercase tracking-[0.2em]">// Professional Repositories</div>
+          <ul className="space-y-1.5">
+            <li>
+              <a href="https://github.com/Shakshamshahu" target="_blank" rel="noopener noreferrer"
+                className="text-foreground/85 hover:text-primary transition-colors inline-flex items-center gap-2">
+                <span>↗</span> GitHub — github.com/Shakshamshahu
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/shaksham-shahu/" target="_blank" rel="noopener noreferrer"
+                className="text-foreground/85 hover:text-primary transition-colors inline-flex items-center gap-2">
+                <span>↗</span> LinkedIn — Professional Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="space-y-2">
+          <div className="text-accent uppercase tracking-[0.2em]">// Contact</div>
+          <ul className="space-y-1.5 text-muted-foreground">
+            <li><a href="mailto:Shakshamshahu123@gmail.com" className="hover:text-primary transition-colors">Shakshamshahu123@gmail.com</a></li>
+            <li>+91 7758 957 946</li>
+            <li><a href="/Shaksham_Shahu_Resume.docx" download className="hover:text-primary transition-colors">↓ Download Resume</a></li>
+          </ul>
+        </div>
       </div>
     </footer>
   );
