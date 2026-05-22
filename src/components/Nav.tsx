@@ -20,9 +20,9 @@ export function Nav() {
             </a>
           ))}
         </nav>
-        <a href="/Shaksham_Shahu_Resume.docx" download
+        <a href="#contact"
           className="hidden sm:inline-flex items-center gap-2 rounded-full btn-primary px-5 py-2 text-sm font-semibold">
-          ↓ Resume
+          Resume →
         </a>
       </div>
     </header>
