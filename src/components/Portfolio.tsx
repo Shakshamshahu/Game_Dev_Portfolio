@@ -24,7 +24,7 @@ const projects = [
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="relative">
+    <section id="project" className="relative">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="text-center mb-12">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-gradient">Portfolio</h2>
