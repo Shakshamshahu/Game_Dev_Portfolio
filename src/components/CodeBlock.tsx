@@ -1,11 +1,20 @@
 export function CodeBlock() {
   return (
-    <section id="code" className="border-b border-border/60">
-      <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
-        <SectionLabel id="01" title="featured_logic" subtitle="A type-safe Observer pattern I use in production for global game-state events." />
+    <section id="code" className="relative">
+      <div className="mx-auto max-w-6xl px-6 py-20">
+        <div className="text-center mb-10">
+          <div className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-3">
+            // Modular Event-Driven Architecture (C#)
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-gradient">
+            Featured Engineering Logic
+          </h2>
+          <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">
+            A type-safe Observer pattern I use in production for global game-state events — decoupled UI ↔ gameplay with zero GC churn.
+          </p>
+        </div>
 
-        <div className="mt-10 overflow-hidden rounded-lg border border-border bg-card shadow-2xl">
-          {/* Editor chrome */}
+        <div className="overflow-hidden rounded-2xl border border-border bg-card/70 backdrop-blur shadow-2xl glow-card">
           <div className="flex items-center justify-between border-b border-border bg-secondary/40 px-4 py-2.5">
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-destructive/70" />
@@ -13,37 +22,38 @@ export function CodeBlock() {
               <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
             </div>
             <span className="font-mono text-xs text-muted-foreground">
-              GameEventBus.cs <span className="text-primary">●</span>
+              GameStateObserver.cs <span className="text-primary">●</span>
             </span>
             <span className="font-mono text-xs text-muted-foreground">C#</span>
           </div>
 
-          {/* Code */}
           <pre className="overflow-x-auto p-6 font-mono text-[13px] leading-relaxed">
             <code>
 {linesWithNumbers([
-  <><span className="tok-com">// Type-safe event bus — Observer pattern</span></>,
-  <><span className="tok-key">public static class</span> <span className="tok-type">GameEvents</span> {"{"}</>,
-  <>{"    "}<span className="tok-key">private static readonly</span> <span className="tok-type">Dictionary</span>{"<"}<span className="tok-type">Type</span>, <span className="tok-type">Delegate</span>{">"} _bus = <span className="tok-key">new</span>();</>,
+  <><span className="tok-key">using</span> <span className="tok-type">System</span>;</>,
+  <><span className="tok-key">using</span> <span className="tok-type">UnityEngine</span>;</>,
   <></>,
-  <>{"    "}<span className="tok-key">public static void</span> <span className="tok-fn">Subscribe</span>{"<"}<span className="tok-type">T</span>{">"}(<span className="tok-type">Action</span>{"<"}<span className="tok-type">T</span>{">"} handler) <span className="tok-key">where</span> <span className="tok-type">T</span> : <span className="tok-key">struct</span> {"{"}</>,
-  <>{"        "}_bus.TryGetValue(<span className="tok-key">typeof</span>(<span className="tok-type">T</span>), <span className="tok-key">out var</span> existing);</>,
-  <>{"        "}_bus[<span className="tok-key">typeof</span>(<span className="tok-type">T</span>)] = <span className="tok-type">Delegate</span>.Combine(existing, handler);</>,
-  <>{"    "}{"}"}</>,
+  <><span className="tok-key">public class</span> <span className="tok-type">GameStateObserver</span> : <span className="tok-type">MonoBehaviour</span> {"{"}</>,
+  <>{"    "}<span className="tok-key">public static event</span> <span className="tok-type">Action</span> <span className="tok-fn">OnScoreUpdated</span>;</>,
   <></>,
-  <>{"    "}<span className="tok-key">public static void</span> <span className="tok-fn">Raise</span>{"<"}<span className="tok-type">T</span>{">"}(<span className="tok-type">T</span> payload) <span className="tok-key">where</span> <span className="tok-type">T</span> : <span className="tok-key">struct</span> {"{"}</>,
-  <>{"        "}<span className="tok-key">if</span> (_bus.TryGetValue(<span className="tok-key">typeof</span>(<span className="tok-type">T</span>), <span className="tok-key">out var</span> d))</>,
-  <>{"            "}((<span className="tok-type">Action</span>{"<"}<span className="tok-type">T</span>{">"})d)?.<span className="tok-fn">Invoke</span>(payload);</>,
+  <>{"    "}<span className="tok-key">public void</span> <span className="tok-fn">UpdateScore</span>(<span className="tok-key">int</span> newScore) {"{"}</>,
+  <>{"        "}<span className="tok-com">// Logic: Perform update, then notify listeners</span></>,
+  <>{"        "}<span className="tok-fn">OnScoreUpdated</span>?.<span className="tok-fn">Invoke</span>();</>,
   <>{"    "}{"}"}</>,
   <>{"}"}</>,
-  <></>,
-  <><span className="tok-com">// usage — zero GC, decoupled UI ↔ gameplay</span></>,
-  <><span className="tok-type">GameEvents</span>.<span className="tok-fn">Raise</span>(<span className="tok-key">new</span> <span className="tok-type">LevelCompleted</span> {"{"} stars = <span className="tok-num">3</span> {"}"});</>,
 ])}
             </code>
           </pre>
         </div>
       </div>
+
+      <style>{`
+        .tok-key { color: oklch(0.78 0.18 305); }
+        .tok-type { color: oklch(0.82 0.16 200); }
+        .tok-fn { color: oklch(0.85 0.15 90); }
+        .tok-com { color: oklch(0.65 0.04 290); font-style: italic; }
+        .tok-num { color: oklch(0.78 0.18 30); }
+      `}</style>
     </section>
   );
 }
