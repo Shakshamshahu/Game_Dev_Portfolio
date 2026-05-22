@@ -39,7 +39,7 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#portfolio" className="btn-primary rounded-full px-6 py-3 text-sm font-semibold">
+            <a href="#project" className="btn-primary rounded-full px-6 py-3 text-sm font-semibold">
               View Portfolio →
             </a>
             <a href="#contact" className="rounded-full border border-border bg-white/5 px-6 py-3 text-sm font-semibold text-foreground hover:bg-white/10 transition-colors">
