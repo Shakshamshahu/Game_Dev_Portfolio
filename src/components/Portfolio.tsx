@@ -6,6 +6,8 @@ type Project = {
   gradient: string;
   category: string;
   overview: string;
+  progression: string;
+  features: string;
   challenges: string[];
   stack: string[];
   metrics: { label: string; value: string }[];
@@ -20,19 +22,23 @@ const projects: Project[] = [
     gradient: "from-amber-500/40 to-orange-500/30",
     category: "Puzzle · Mobile",
     overview:
-      "Skill-based mobile puzzle game packing 15+ unique gameplay modes, detective rank progression, and a full meta-game loop. Players sharpen logic, memory, pattern recognition and reaction through side missions and avatar customization.",
+      "Skill-based mobile puzzle game focused on core cognitive training with 15+ distinct gameplay modes, each crafted to test logic, memory, pattern recognition and reaction time. Delivers a thought-provoking casual experience that sharpens player intelligence while solving mysteries.",
+    progression:
+      "Anchored by an interactive narrative meta-game built on a structured detective ranking system. Players advance through multiple rank tiers via skill mastery, with dynamic difficulty scaling and 4–5 meta side-mission mini-games unlocking additional structural rewards.",
+    features:
+      "Deep avatar customization suite for personalizing detective appearance and operational gear, tightly coupled with rank progression for long-term retention. Includes an integrated in-game feedback and technical issue-reporting framework.",
     challenges: [
-      "Engineered a scalable skill & scoring system supporting 15+ disparate gameplay types under one project.",
+      "Engineered a scalable skill & scoring system supporting 15+ disparate gameplay types under one project footprint.",
       "Built a multi-gameplay handler that loads and transitions between modes seamlessly at runtime.",
-      "Organised 500–800 sprites into atlases with deep memory and async-loading optimisations.",
-      "Reduced ANR crash rate from ~4% to 0.4–0.5% on low-end devices via profiling and pooling.",
+      "Compiled 500–800 sprites into texture atlases with deep memory and async-loading optimisations.",
+      "Reduced ANR crash rate from ~4% to 0.4–0.5% on low-end devices through profiling and pooling.",
       "Architected core systems from scratch: IAP, ads, analytics, save/load, reward, meta + skills.",
     ],
     stack: ["C#", "Unity", "Firebase", "Object Pooling", "Atlases"],
     metrics: [
-      { label: "Downloads", value: "10M+" },
-      { label: "ANR Rate", value: "0.4%" },
       { label: "Game Modes", value: "15+" },
+      { label: "ANR Rate", value: "0.4%" },
+      { label: "Sprites", value: "800+" },
     ],
     repo: "https://github.com/shakshamshahu",
     demo: "https://play.google.com/store/search?q=Detective+IQ+MindYourLogic&c=apps",
@@ -43,7 +49,11 @@ const projects: Project[] = [
     gradient: "from-sky-500/40 to-cyan-500/30",
     category: "Narrative · Puzzle",
     overview:
-      "Narrative-driven sequel with choice-based story levels, erase puzzles, physics missions and a full prison-management meta. Every decision reshapes the branch flow, fueling deep replayability across contrasting gameplay archetypes.",
+      "Immersive, narrative-driven sequel where every player decision dynamically alters the story trajectory. Unifies contrasting archetypes — branch-based stories to interactive physics puzzles — with stylized comic storytelling and fluid visual transitions.",
+    progression:
+      "Layered reward loops anchored by a Thief Capture & Punishment Pipeline (detection → automated prison processing) and a Prison Management Meta with balanced upgrades for cells, guards, cameras, environment and utilities. Includes a ticket economy across 6 reward mini-games with precise probability logic.",
+    features:
+      "Story levels react entirely to branching choices, opening alternate flows and high replayability. Dedicated erase-style puzzle logic shared across story and standalone modes. In-game panel-by-panel comic system with custom transitions, animated panels and 20+ player-triggered punishment animations.",
     challenges: [
       "Built the branch-based choice gameplay where each decision rewrites the story flow.",
       "Developed erase-style puzzle logic shared across story mode and standalone erase mode.",
@@ -68,7 +78,11 @@ const projects: Project[] = [
     gradient: "from-teal-500/40 to-emerald-500/30",
     category: "Narrative · Team Lead",
     overview:
-      "Sequence-driven narrative puzzler fusing three disparate mechanics — Erase, Draw and Two-Option Story — into a single cohesive flow. Led the architecture, prototyping and team standards across the full project lifecycle.",
+      "Sequence-driven narrative puzzler that fuses entirely distinct puzzle archetypes into a single cohesive flow. Meticulously balanced storytelling sequences where diverse mechanical loops work in tandem to drive the overarching mystery forward.",
+    progression:
+      "Guided narrative progression paired with skill-based puzzles. Pacing is directly tied to the player's capacity to resolve sequence-driven story steps, with engagement validated through technical benchmarks and motivation loops set during prototyping.",
+    features:
+      "Three core gameplay loops collaborating in one project footprint: Erase mechanics, Draw mechanics and Two-Option Story systems. Interactive storytelling pipeline where choices and tactile inputs drive a comic-style layout.",
     challenges: [
       "Designed the high-level gameplay architecture unifying 3 core mechanics in one codebase.",
       "Led prototyping for all three loops, setting performance benchmarks and engagement KPIs.",
@@ -91,7 +105,11 @@ const projects: Project[] = [
     gradient: "from-rose-500/40 to-amber-500/30",
     category: "Brain Training · Casual",
     overview:
-      "Brain-Out–inspired mobile puzzler built entirely from scratch with an expansive catalogue of out-of-the-box logic levels. Wrapped in a lighthearted culinary theme with instant pick-up-and-play touch interactions.",
+      "Engaging mobile puzzle title built completely from scratch, drawing creative inspiration from classic mind-training benchmarks like Brain Out. Delivers an expansive suite of levels challenging logical deduction, spatial awareness and creative thinking inside a lighthearted culinary theme.",
+    progression:
+      "Level-driven progression with a steady ramp of conceptual difficulty. Players advance sequentially through an extensive catalog of custom-engineered puzzles that demand outside-the-box thinking and unlock increasingly complex logic scenarios.",
+    features:
+      "Wide array of uniquely designed puzzle levels using highly interactive touch-and-gesture interfaces. Focused on a streamlined, accessible casual UX balancing brain-teasing complexity with instant pick-up-and-play visual layouts.",
     challenges: [
       "Built a modular level-loading framework supporting highly varied puzzle definitions.",
       "Designed a flexible puzzle-evaluation state machine that validates atypical solutions.",
@@ -112,7 +130,11 @@ const projects: Project[] = [
     gradient: "from-cyan-500/40 to-blue-500/30",
     category: "Physics · Puzzle",
     overview:
-      "Multi-mechanic puzzle game packing three established play styles — Cut the Rope, Save from Bees and Pull the Pin — into a single app footprint. Players protect detective avatars across logic-driven rescue scenarios with steadily layered difficulty.",
+      "Multi-mechanic mobile puzzle game packing three highly engaging puzzle genres into a single cohesive package. Players protect and rescue detective avatars across dangerous, logic-driven scenarios with steadily layered difficulty.",
+    progression:
+      "Difficulty scales dynamically by intertwining mechanics across levels. The challenge curve ensures long-term engagement by steadily requiring deeper tactical foresight and quick-thinking puzzle-solving to unlock further chapters.",
+    features:
+      "Triple-mechanic gameplay inside one app footprint: 'Cut the Rope' physics levels, 'Save from Bees' tactical drawing lines, and 'Pull the Pin' sequential pathfinding challenges.",
     challenges: [
       "Maintained optimised performance across three distinct gameplay modules in one architecture.",
       "Refined physics for rope cutting, fluid/pin logic and environmental interactions for mobile.",
@@ -121,7 +143,7 @@ const projects: Project[] = [
     stack: ["C#", "Unity", "2D Physics", "Modular Systems"],
     metrics: [
       { label: "Mechanics", value: "3" },
-      { label: "Team Size", value: "Cross-func" },
+      { label: "Team", value: "Cross-func" },
       { label: "Platform", value: "Android" },
     ],
     repo: "https://github.com/shakshamshahu",
@@ -133,7 +155,11 @@ const projects: Project[] = [
     gradient: "from-yellow-500/40 to-orange-500/30",
     category: "Physics · Drawing",
     overview:
-      "Physics-driven drawing puzzler where players shield a character from swarming bees by sketching protective geometry in real time. Difficulty layers up via new bee behaviours and environmental hazards as levels progress.",
+      "Simple yet deeply engaging physics-puzzle title where players protect a character avatar from aggressive bee swarms by strategically drawing protective lines and shapes in real time within the screen boundaries.",
+    progression:
+      "Robust difficulty curve that layers new challenges deeper into the level matrix. Pacing introduces structural environmental hazards and complex obstacle layouts, forcing increasingly clever, resource-efficient geometry to clear stages.",
+    features:
+      "High gameplay variety through distinct adversary ecosystems — multiple bee types with unique flight and targeting behaviours that prevent generic shape solutions from working at higher levels.",
     challenges: [
       "Converted continuous touch paths into rigid 2D physics colliders in real time.",
       "Implemented multiple bee types with unique flight & targeting AI to prevent generic solutions.",
@@ -154,7 +180,11 @@ const projects: Project[] = [
     gradient: "from-amber-500/40 to-yellow-500/30",
     category: "Narrative · Family",
     overview:
-      "Colorful 2D, story-based puzzle game for family-friendly brain training, retelling treasured chapters from Indian mythology. Choice-based puzzles and riddles guide players through Little Krishna's playful adventures — fully offline.",
+      "Colorful 2D, story-based puzzle game for family-friendly brain training, retelling treasured chapters from Indian mythology. Guides players through Little Krishna's playful childhood adventures, combining narrative progression with interactive puzzle elements.",
+    progression:
+      "Chronological progression through mythological milestones: Makhan Chor Adventures (butter-stealing puzzles), Childhood Escapes (slipping away from Maa Yashoda) and Exploration & Conflict (jungle hazards including the legendary Aghasura snake).",
+    features:
+      "Vibrant 2D cartoon aesthetic with choice-based puzzle solving where players select paths or actions to advance. Packed with tricky brain teasers and riddles, fully offline, with humorous animated 'fail' states on incorrect choices.",
     challenges: [
       "Built a narrative flow state machine for conditional branches with no server dependency.",
       "Optimised animations and narrative panels under strict memory budgets for wide device support.",
@@ -199,7 +229,6 @@ function GameGrid({ onSelect }: { onSelect: (idx: number) => void }) {
             className="group relative text-left transition-all duration-200 focus:outline-none"
             style={{ background: BG }}
           >
-            {/* Thumbnail */}
             <div
               className={`aspect-video bg-gradient-to-br ${p.gradient} relative flex items-center justify-center overflow-hidden`}
             >
@@ -222,7 +251,6 @@ function GameGrid({ onSelect }: { onSelect: (idx: number) => void }) {
               </div>
             </div>
 
-            {/* Title bar */}
             <div
               className="px-3 py-2.5 border-t flex items-center gap-2"
               style={{ borderColor: BORDER }}
@@ -244,10 +272,24 @@ function GameGrid({ onSelect }: { onSelect: (idx: number) => void }) {
   );
 }
 
+function Section({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <div
+        className="font-mono text-[11px] uppercase tracking-wider mb-3 flex items-center gap-2"
+        style={{ color: MUTED }}
+      >
+        <span style={{ color: ELECTRIC }}>//</span> {label}
+      </div>
+      {children}
+    </div>
+  );
+}
+
 function GameDetail({ project, onBack }: { project: Project; onBack: () => void }) {
+  const slug = project.title.toLowerCase().replace(/[^a-z0-9]+/g, "_");
   return (
     <div className="animate-in fade-in duration-200">
-      {/* Breadcrumb / back bar */}
       <div
         className="px-4 py-3 border-b font-mono text-[11px] flex items-center gap-2"
         style={{ borderColor: BORDER, color: MUTED }}
@@ -261,17 +303,16 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
           <span>cd ../projects/</span>
         </button>
         <span style={{ color: BORDER }}>/</span>
-        <span style={{ color: ELECTRIC }}>{project.title.toLowerCase().replace(/[^a-z0-9]+/g, "_")}</span>
+        <span style={{ color: ELECTRIC }}>{slug}</span>
       </div>
 
-      {/* Hero image */}
       <div
         className={`h-64 md:h-80 bg-gradient-to-br ${project.gradient} relative flex items-center justify-center border-b`}
         style={{ borderColor: BORDER }}
       >
         <span className="text-8xl drop-shadow-2xl">{project.icon}</span>
         <div className="absolute top-4 left-4 font-mono text-[11px]" style={{ color: "#cbd5e1" }}>
-          $ open ./{project.title.toLowerCase().replace(/[^a-z0-9]+/g, "_")}.png
+          $ open ./{slug}.png
         </div>
         <div className="absolute bottom-4 right-4 font-mono text-[11px]" style={{ color: MUTED }}>
           {project.category}
@@ -279,7 +320,6 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
       </div>
 
       <div className="p-6 md:p-8 space-y-8">
-        {/* Title + back button */}
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div>
             <div className="font-mono text-[11px] uppercase tracking-wider mb-1" style={{ color: ELECTRIC }}>
@@ -299,11 +339,7 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
           </button>
         </div>
 
-        {/* Metrics row */}
-        <div
-          className="grid grid-cols-3 border"
-          style={{ borderColor: BORDER }}
-        >
+        <div className="grid grid-cols-3 border" style={{ borderColor: BORDER }}>
           {project.metrics.map((m) => (
             <div
               key={m.label}
@@ -320,27 +356,25 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
           ))}
         </div>
 
-        {/* Overview */}
-        <div>
-          <div
-            className="font-mono text-[11px] uppercase tracking-wider mb-3 flex items-center gap-2"
-            style={{ color: MUTED }}
-          >
-            <span style={{ color: ELECTRIC }}>//</span> overview
-          </div>
+        <Section label="game_overview">
           <p className="font-mono text-sm leading-relaxed" style={{ color: TEXT }}>
             {project.overview}
           </p>
-        </div>
+        </Section>
 
-        {/* Technical Challenges */}
-        <div>
-          <div
-            className="font-mono text-[11px] uppercase tracking-wider mb-3 flex items-center gap-2"
-            style={{ color: MUTED }}
-          >
-            <span style={{ color: ELECTRIC }}>//</span> technical_challenges
-          </div>
+        <Section label="progression_system">
+          <p className="font-mono text-sm leading-relaxed" style={{ color: TEXT }}>
+            {project.progression}
+          </p>
+        </Section>
+
+        <Section label="customization_and_features">
+          <p className="font-mono text-sm leading-relaxed" style={{ color: TEXT }}>
+            {project.features}
+          </p>
+        </Section>
+
+        <Section label="technical_highlights">
           <ul className="space-y-3">
             {project.challenges.map((c, i) => (
               <li key={i} className="flex gap-3 font-mono text-sm leading-relaxed">
@@ -351,16 +385,9 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
               </li>
             ))}
           </ul>
-        </div>
+        </Section>
 
-        {/* Tech Stack */}
-        <div>
-          <div
-            className="font-mono text-[11px] uppercase tracking-wider mb-3 flex items-center gap-2"
-            style={{ color: MUTED }}
-          >
-            <span style={{ color: ELECTRIC }}>//</span> tech_stack
-          </div>
+        <Section label="tech_stack">
           <div className="flex flex-wrap gap-2">
             {project.stack.map((t) => (
               <span
@@ -372,9 +399,8 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
               </span>
             ))}
           </div>
-        </div>
+        </Section>
 
-        {/* Actions */}
         <div
           className="flex flex-wrap gap-3 pt-6 border-t"
           style={{ borderColor: BORDER }}
@@ -395,7 +421,7 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
             className="font-mono text-sm px-5 py-2.5 border transition-colors hover:bg-[rgba(0,123,255,0.1)]"
             style={{ borderColor: ELECTRIC, color: ELECTRIC }}
           >
-            &gt; view_demo
+            &gt; play_store
           </a>
           <button
             onClick={onBack}
@@ -416,7 +442,6 @@ export function Portfolio() {
   return (
     <section id="project" className="relative">
       <div className="mx-auto max-w-7xl px-6 py-20">
-        {/* Section header */}
         <div className="mb-10">
           <div className="font-mono text-xs" style={{ color: ELECTRIC }}>
             // 03_projects
@@ -431,7 +456,6 @@ export function Portfolio() {
           )}
         </div>
 
-        {/* Master / Detail container */}
         <div
           className="border overflow-hidden"
           style={{ borderColor: BORDER, background: BG }}
