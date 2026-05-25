@@ -240,9 +240,13 @@ function GameGrid({ onSelect }: { onSelect: (idx: number) => void }) {
             <div
               className={`aspect-video bg-gradient-to-br ${p.gradient} relative flex items-center justify-center overflow-hidden`}
             >
-              <span className="text-5xl group-hover:scale-110 transition-transform duration-300">
-                {p.icon}
-              </span>
+              <img
+                src={p.icon}
+                alt={`${p.title} icon`}
+                loading="lazy"
+                className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover shadow-lg group-hover:scale-110 transition-transform duration-300"
+              />
+
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center"
                 style={{ background: "rgba(0,123,255,0.15)" }}
