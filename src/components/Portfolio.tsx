@@ -1,4 +1,12 @@
 import { useState } from "react";
+import detectiveIqIcon from "@/assets/games/detective-iq.png";
+import detectiveIq2Icon from "@/assets/games/detective-iq-2.png";
+import detectiveIq3Icon from "@/assets/games/detective-iq-3.png";
+import pizzaIqIcon from "@/assets/games/pizza-iq.png";
+import saveDetectivesIcon from "@/assets/games/save-detectives.png";
+import beesAttackIcon from "@/assets/games/bees-attack.png";
+import krishnaStoriesIcon from "@/assets/games/krishna-stories.png";
+
 
 type Project = {
   title: string;
