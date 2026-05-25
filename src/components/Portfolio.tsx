@@ -322,7 +322,7 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
         className={`h-64 md:h-80 bg-gradient-to-br ${project.gradient} relative flex items-center justify-center border-b`}
         style={{ borderColor: BORDER }}
       >
-        <span className="text-8xl drop-shadow-2xl">{project.icon}</span>
+        <img src={project.icon} alt={`${project.title} icon`} className="w-40 h-40 md:w-52 md:h-52 rounded-2xl object-cover shadow-2xl" />
         <div className="absolute top-4 left-4 font-mono text-[11px]" style={{ color: "#cbd5e1" }}>
           $ open ./{slug}.png
         </div>
