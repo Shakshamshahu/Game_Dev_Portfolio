@@ -10,7 +10,7 @@ import krishnaStoriesIcon from "@/assets/games/krishna-stories.png";
 
 type Project = {
   title: string;
-  icon: string;
+  icon: string; // image src
   gradient: string;
   category: string;
   overview: string;
