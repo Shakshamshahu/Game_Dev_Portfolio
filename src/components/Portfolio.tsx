@@ -418,15 +418,6 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
           style={{ borderColor: BORDER }}
         >
           <a
-            href={project.repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-sm px-5 py-2.5 border transition-colors hover:bg-[rgba(0,123,255,0.1)]"
-            style={{ borderColor: ELECTRIC, color: ELECTRIC }}
-          >
-            &gt; view_repo
-          </a>
-          <a
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
