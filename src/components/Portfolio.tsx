@@ -1,8 +1,16 @@
 import { useState } from "react";
+import detectiveIqIcon from "@/assets/games/detective-iq.png";
+import detectiveIq2Icon from "@/assets/games/detective-iq-2.png";
+import detectiveIq3Icon from "@/assets/games/detective-iq-3.png";
+import pizzaIqIcon from "@/assets/games/pizza-iq.png";
+import saveDetectivesIcon from "@/assets/games/save-detectives.png";
+import beesAttackIcon from "@/assets/games/bees-attack.png";
+import krishnaStoriesIcon from "@/assets/games/krishna-stories.png";
+
 
 type Project = {
   title: string;
-  icon: string;
+  icon: string; // image src
   gradient: string;
   category: string;
   overview: string;
@@ -18,7 +26,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Detective IQ",
-    icon: "🕵️",
+    icon: detectiveIqIcon,
     gradient: "from-amber-500/40 to-orange-500/30",
     category: "Puzzle · Mobile",
     overview:
@@ -45,7 +53,7 @@ const projects: Project[] = [
   },
   {
     title: "Detective IQ 2",
-    icon: "🧩",
+    icon: detectiveIq2Icon,
     gradient: "from-sky-500/40 to-cyan-500/30",
     category: "Narrative · Puzzle",
     overview:
@@ -70,11 +78,11 @@ const projects: Project[] = [
       { label: "Mini-Games", value: "6" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Detective+IQ+2+MindYourLogic&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.brain.test.logic.puzzle.detective.iq2",
   },
   {
     title: "Detective IQ 3",
-    icon: "🔍",
+    icon: detectiveIq3Icon,
     gradient: "from-teal-500/40 to-emerald-500/30",
     category: "Narrative · Team Lead",
     overview:
@@ -97,11 +105,11 @@ const projects: Project[] = [
       { label: "Role", value: "Lead" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Detective+IQ+3&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.brain.test.logic.puzzle.detective.iq3",
   },
   {
     title: "Pizza IQ: Brain Games",
-    icon: "🍕",
+    icon: pizzaIqIcon,
     gradient: "from-rose-500/40 to-amber-500/30",
     category: "Brain Training · Casual",
     overview:
@@ -122,11 +130,11 @@ const projects: Project[] = [
       { label: "Platform", value: "Android" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Pizza+IQ+Brain+Games&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.unbox.pizza.brain.teaser.logic.puzzle",
   },
   {
     title: "Save Detectives",
-    icon: "🦈",
+    icon: saveDetectivesIcon,
     gradient: "from-cyan-500/40 to-blue-500/30",
     category: "Physics · Puzzle",
     overview:
@@ -147,11 +155,11 @@ const projects: Project[] = [
       { label: "Platform", value: "Android" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Save+Detectives+Brain+Puzzles&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.draw.game.save.dog.brain.puzzle",
   },
   {
     title: "Bees Attack: Draw to Save",
-    icon: "🐝",
+    icon: beesAttackIcon,
     gradient: "from-yellow-500/40 to-orange-500/30",
     category: "Physics · Drawing",
     overview:
@@ -172,11 +180,11 @@ const projects: Project[] = [
       { label: "Platform", value: "Android" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Bees+Attack+Draw+to+Save&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.save.bees.dog.puzzle.hard.logic",
   },
   {
     title: "Krishna Stories Game",
-    icon: "🪈",
+    icon: krishnaStoriesIcon,
     gradient: "from-amber-500/40 to-yellow-500/30",
     category: "Narrative · Family",
     overview:
@@ -232,9 +240,13 @@ function GameGrid({ onSelect }: { onSelect: (idx: number) => void }) {
             <div
               className={`aspect-video bg-gradient-to-br ${p.gradient} relative flex items-center justify-center overflow-hidden`}
             >
-              <span className="text-5xl group-hover:scale-110 transition-transform duration-300">
-                {p.icon}
-              </span>
+              <img
+                src={p.icon}
+                alt={`${p.title} icon`}
+                loading="lazy"
+                className="w-20 h-20 md:w-24 md:h-24 rounded-xl object-cover shadow-lg group-hover:scale-110 transition-transform duration-300"
+              />
+
               <div
                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center"
                 style={{ background: "rgba(0,123,255,0.15)" }}
@@ -310,7 +322,7 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
         className={`h-64 md:h-80 bg-gradient-to-br ${project.gradient} relative flex items-center justify-center border-b`}
         style={{ borderColor: BORDER }}
       >
-        <span className="text-8xl drop-shadow-2xl">{project.icon}</span>
+        <img src={project.icon} alt={`${project.title} icon`} className="w-40 h-40 md:w-52 md:h-52 rounded-2xl object-cover shadow-2xl" />
         <div className="absolute top-4 left-4 font-mono text-[11px]" style={{ color: "#cbd5e1" }}>
           $ open ./{slug}.png
         </div>
@@ -405,15 +417,6 @@ function GameDetail({ project, onBack }: { project: Project; onBack: () => void 
           className="flex flex-wrap gap-3 pt-6 border-t"
           style={{ borderColor: BORDER }}
         >
-          <a
-            href={project.repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-sm px-5 py-2.5 border transition-colors hover:bg-[rgba(0,123,255,0.1)]"
-            style={{ borderColor: ELECTRIC, color: ELECTRIC }}
-          >
-            &gt; view_repo
-          </a>
           <a
             href={project.demo}
             target="_blank"
