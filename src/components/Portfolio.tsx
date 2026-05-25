@@ -26,7 +26,7 @@ type Project = {
 const projects: Project[] = [
   {
     title: "Detective IQ",
-    icon: "🕵️",
+    icon: detectiveIqIcon,
     gradient: "from-amber-500/40 to-orange-500/30",
     category: "Puzzle · Mobile",
     overview:
@@ -53,7 +53,7 @@ const projects: Project[] = [
   },
   {
     title: "Detective IQ 2",
-    icon: "🧩",
+    icon: detectiveIq2Icon,
     gradient: "from-sky-500/40 to-cyan-500/30",
     category: "Narrative · Puzzle",
     overview:
@@ -78,11 +78,11 @@ const projects: Project[] = [
       { label: "Mini-Games", value: "6" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Detective+IQ+2+MindYourLogic&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.brain.test.logic.puzzle.detective.iq2",
   },
   {
     title: "Detective IQ 3",
-    icon: "🔍",
+    icon: detectiveIq3Icon,
     gradient: "from-teal-500/40 to-emerald-500/30",
     category: "Narrative · Team Lead",
     overview:
@@ -105,11 +105,11 @@ const projects: Project[] = [
       { label: "Role", value: "Lead" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Detective+IQ+3&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.brain.test.logic.puzzle.detective.iq3",
   },
   {
     title: "Pizza IQ: Brain Games",
-    icon: "🍕",
+    icon: pizzaIqIcon,
     gradient: "from-rose-500/40 to-amber-500/30",
     category: "Brain Training · Casual",
     overview:
@@ -130,11 +130,11 @@ const projects: Project[] = [
       { label: "Platform", value: "Android" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Pizza+IQ+Brain+Games&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.unbox.pizza.brain.teaser.logic.puzzle",
   },
   {
     title: "Save Detectives",
-    icon: "🦈",
+    icon: saveDetectivesIcon,
     gradient: "from-cyan-500/40 to-blue-500/30",
     category: "Physics · Puzzle",
     overview:
@@ -155,11 +155,11 @@ const projects: Project[] = [
       { label: "Platform", value: "Android" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Save+Detectives+Brain+Puzzles&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.draw.game.save.dog.brain.puzzle",
   },
   {
     title: "Bees Attack: Draw to Save",
-    icon: "🐝",
+    icon: beesAttackIcon,
     gradient: "from-yellow-500/40 to-orange-500/30",
     category: "Physics · Drawing",
     overview:
@@ -180,11 +180,11 @@ const projects: Project[] = [
       { label: "Platform", value: "Android" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Bees+Attack+Draw+to+Save&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.save.bees.dog.puzzle.hard.logic",
   },
   {
     title: "Krishna Stories Game",
-    icon: "🪈",
+    icon: krishnaStoriesIcon,
     gradient: "from-amber-500/40 to-yellow-500/30",
     category: "Narrative · Family",
     overview:
