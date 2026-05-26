@@ -50,7 +50,7 @@ const projects: Project[] = [
       { label: "Sprites", value: "800+" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Detective+IQ+MindYourLogic&c=apps",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.brain.test.logic.puzzle.detective.iq",
   },
   {
     title: "Detective IQ 2",
