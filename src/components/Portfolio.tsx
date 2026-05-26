@@ -109,6 +109,56 @@ const projects: Project[] = [
     demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.brain.test.logic.puzzle.detective.iq3",
   },
   {
+    title: "Ghost IQ: Haunted House Escape",
+    icon: ghostIqIcon,
+    gradient: "from-purple-500/40 to-fuchsia-500/30",
+    category: "Supernatural · Logic",
+    overview:
+      "Supernatural-themed logic puzzle game that puts a unique twist on the traditional detective genre. Players solve eerie, mystery-based brain teasers to reveal hidden secrets and spectral clues, focusing on pattern recognition and observation under time pressure.",
+    progression:
+      "Progression involves mastering different spectral zones, each with increasing puzzle complexity. Players earn ghost-hunter titles as they clear levels, with a spirit-meter that tracks performance and surfaces hints when players encounter particularly difficult mysteries.",
+    features:
+      "Supernatural-themed avatar skins and tools that aid in detecting hidden objects. The UI uses an atmospheric aesthetic that shifts based on each level's tone, enhancing the immersive haunted experience.",
+    challenges: [
+      "Developed a custom shader system to handle atmospheric lighting and spectral effects without sacrificing frame rate.",
+      "Engineered advanced AI logic for NPC ghost behaviour, creating unpredictable interactions that keep gameplay fresh and challenging.",
+      "Tuned pattern recognition and observation puzzles to scale under time-pressure constraints.",
+    ],
+    stack: ["C#", "Unity", "Custom Shaders", "AI", "FSM"],
+    metrics: [
+      { label: "Spectral Zones", value: "Multi" },
+      { label: "Ghost AI", value: "Dynamic" },
+      { label: "Platform", value: "Android" },
+    ],
+    repo: "https://github.com/shakshamshahu",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.ghost.puzzle.escape.horror.mystery",
+  },
+  {
+    title: "Krishna Stories Game",
+    icon: krishnaStoriesIcon,
+    gradient: "from-amber-500/40 to-yellow-500/30",
+    category: "Narrative · Family",
+    overview:
+      "Colorful 2D, story-based puzzle game for family-friendly brain training, retelling treasured chapters from Indian mythology. Guides players through Little Krishna's playful childhood adventures, combining narrative progression with interactive puzzle elements.",
+    progression:
+      "Chronological progression through mythological milestones: Makhan Chor Adventures (butter-stealing puzzles), Childhood Escapes (slipping away from Maa Yashoda) and Exploration & Conflict (jungle hazards including the legendary Aghasura snake).",
+    features:
+      "Vibrant 2D cartoon aesthetic with choice-based puzzle solving where players select paths or actions to advance. Packed with tricky brain teasers and riddles, fully offline, with humorous animated 'fail' states on incorrect choices.",
+    challenges: [
+      "Built a narrative flow state machine for conditional branches with no server dependency.",
+      "Optimised animations and narrative panels under strict memory budgets for wide device support.",
+      "Authored chapter-based progression: Makhan Chor, Childhood Escapes, Aghasura encounter.",
+    ],
+    stack: ["C#", "Unity", "FSM", "Offline-First", "2D Animation"],
+    metrics: [
+      { label: "Chapters", value: "3+" },
+      { label: "Connectivity", value: "Offline" },
+      { label: "Audience", value: "Family" },
+    ],
+    repo: "https://github.com/shakshamshahu",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.krishnastoriesastories",
+  },
+  {
     title: "Pizza IQ: Brain Games",
     icon: pizzaIqIcon,
     gradient: "from-rose-500/40 to-amber-500/30",
@@ -182,31 +232,6 @@ const projects: Project[] = [
     ],
     repo: "https://github.com/shakshamshahu",
     demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.save.bees.dog.puzzle.hard.logic",
-  },
-  {
-    title: "Krishna Stories Game",
-    icon: krishnaStoriesIcon,
-    gradient: "from-amber-500/40 to-yellow-500/30",
-    category: "Narrative · Family",
-    overview:
-      "Colorful 2D, story-based puzzle game for family-friendly brain training, retelling treasured chapters from Indian mythology. Guides players through Little Krishna's playful childhood adventures, combining narrative progression with interactive puzzle elements.",
-    progression:
-      "Chronological progression through mythological milestones: Makhan Chor Adventures (butter-stealing puzzles), Childhood Escapes (slipping away from Maa Yashoda) and Exploration & Conflict (jungle hazards including the legendary Aghasura snake).",
-    features:
-      "Vibrant 2D cartoon aesthetic with choice-based puzzle solving where players select paths or actions to advance. Packed with tricky brain teasers and riddles, fully offline, with humorous animated 'fail' states on incorrect choices.",
-    challenges: [
-      "Built a narrative flow state machine for conditional branches with no server dependency.",
-      "Optimised animations and narrative panels under strict memory budgets for wide device support.",
-      "Authored chapter-based progression: Makhan Chor, Childhood Escapes, Aghasura encounter.",
-    ],
-    stack: ["C#", "Unity", "FSM", "Offline-First", "2D Animation"],
-    metrics: [
-      { label: "Chapters", value: "3+" },
-      { label: "Connectivity", value: "Offline" },
-      { label: "Audience", value: "Family" },
-    ],
-    repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/search?q=Krishna+Stories+Game&c=apps",
   },
 ];
 
