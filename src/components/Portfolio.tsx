@@ -156,7 +156,7 @@ const projects: Project[] = [
       { label: "Audience", value: "Family" },
     ],
     repo: "https://github.com/shakshamshahu",
-    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.krishnastoriesastories",
+    demo: "https://play.google.com/store/apps/details?id=com.mindyourlogic.krishnastories&pcampaignid=web_share",
   },
   {
     title: "Pizza IQ: Brain Games",
